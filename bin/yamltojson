@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+var data = '';
+function pipe(data) {
+  require = require('esm')(module /*, options*/);
+  require('../lib/pipe').pipe(data.trim());
+}
+
+function cli() {
+  require = require('esm')(module /*, options*/);
+  require('../lib/cli').cli(process.argv);
+}
+
+var self = process.stdin;
+self.on('readable', function() {
+  var chunk = this.read();
+  if (chunk === null) {
+    cli();
+  } else {
+      data += chunk;
+  }
+});
+
+self.on('end', function() {
+  pipe(data);
+});

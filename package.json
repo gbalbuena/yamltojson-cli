@@ -1,0 +1,28 @@
+{
+  "name": "@gbalbuena/yamltojson-cli",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/cli.js",
+  "repository": "git@github.com:gbalbuena/yamltojson-cli.git",
+  "bin": {
+    "@gbalbuena/yamltojson": "bin/yamltojson",
+    "yamltojson": "bin/yamltojson"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan Gabriel Balbuena Borba <gabrielbalbuena@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "commander": "^2.20.0",
+    "esm": "^3.2.25",
+    "js-yaml": "^3.13.1"
+  }
+}
